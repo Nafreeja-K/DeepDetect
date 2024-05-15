@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEEPFAKE DETECTION</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url("/static/FIRST BACKGROUND.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding-top: 50px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #ffffff;
+        }
+        .upload-box {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px; /* Add margin bottom to create distance */
+        }
+        .upload-box h2 {
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+        .upload-form {
+            margin-bottom: 20px;
+        }
+        .upload-form input[type="file"] {
+            display: none;
+        }
+        .upload-form label {
+            display: block;
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .upload-form label:hover {
+            background-color: #0056b3;
+        }
+        .upload-form button[type="submit"] {
+            display: block;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .upload-form button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>DEEPFAKE DETECTION</h1>
+        <div class="upload-box">
+            <h2>AUDIO</h2>
+            <form class="upload-form" action="/" method="post" enctype="multipart/form-data">
+                <input type="file" name="file" id="audioFile" accept=".wav" required>
+                <label for="audioFile">Choose Audio File</label>
+                <input type="hidden" name="type" value="audio">
+                <button type="submit">Upload Audio</button>
+            </form>
+        </div>
+        <div class="upload-box">
+            <h2>VIDEO</h2>
+            <form class="upload-form" action="/" method="post" enctype="multipart/form-data">
+                <input type="file" name="file" id="videoFile" accept="video/*" required>
+                <label for="videoFile">Choose Video File</label>
+                <input type="hidden" name="type" value="video">
+                <button type="submit">Upload Video</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
